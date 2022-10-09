@@ -1,7 +1,7 @@
 'use strict'
 
 function BinarioADecimal(num) {
-  // tu codigo aca
+  // tu codigo 
 
 // 110       0*2 ^0    + 1 * 2 ^ 1=   +  1 * 2 ^2 = 
 
