@@ -16,7 +16,7 @@ for (let i = num.length - 1; i >= 0; i--)   {
 }
 
 function DecimalABinario(num) {
-  // tu codigo aca
+  
  // 11 -- 11/2   --- 5.5  ---5 | 1
  //  5 ---5/2    ----2.5 ----2 | 1
  //  2 ---2/2    ---- 1.0 ---1|  0
