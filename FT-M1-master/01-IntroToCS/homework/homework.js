@@ -2,7 +2,7 @@
 
 function BinarioADecimal(num) {
   // tu codigo 
-
+// ejemplo
 // 110       0*2 ^0    + 1 * 2 ^ 1=   +  1 * 2 ^2 = 
 
 var res = 0;
