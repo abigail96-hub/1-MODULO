@@ -162,7 +162,7 @@ Considerando el siguiente código, ¿Cuál sería el orden en el que se muestra 
 ```javascript
 function printing() {
    console.log(1);
-   setTimeout(function() { console.log(2); }, 1000);
+   setTimeout(function() { console.log(2); }, 1000); // se imprimer primero el console, 1, despues el 4, ya que no tienen tiempo de espera, luego el 3, y despues es 2. 
    setTimeout(function() { console.log(3); }, 0);
    console.log(4);
 }

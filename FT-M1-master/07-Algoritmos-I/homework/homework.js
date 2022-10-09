@@ -19,21 +19,21 @@ function factorear(num) {
 
 
   //      como su divisior no es dos si no 3 ya que es un numero primo, entomces entra al else. y se incrementa el divisor y vale 3 
-  var arr = [1]
-  var divisor = 2;
+var arr = [1]
+var divisor = 2;
 
-  while(num !== 1){ 
+while(num !== 1){ 
   if(num % divisor === 0){
     arr.push(divisor);
     num = num / divisor ;
-  }else{ 
+}else{ 
 
-    divisor++
+  divisor++
 
-  }
-  }
-  return arr;
-  }
+}
+}
+return arr;
+}
 
 function bubbleSort(array) {
   // Implementar el método conocido como bubbleSort para ordenar de menor a mayor
@@ -47,12 +47,12 @@ var flag = true;
 while(flag){ 
 flag = false;
 for (let i = 0; i < array.length -1 ; i++){
-  if(array[i]  >  array[i + 1]){ 
-  var aux = array[i]
-  array[i] = array[i + 1];
-  array[i + 1] = aux 
-  flag = true;
-   }
+if(array[i]  >  array[i + 1]){ 
+var aux = array[i]
+array[i] = array[i + 1];
+array[i + 1] = aux 
+flag = true;
+}
 } 
   
 }
@@ -74,17 +74,16 @@ function insertionSort(array) {
 
 for (let i = 1; i < array.length; i++) {
   
-  var j = i - 1;
-  var aux = array[i];  // 1
-  while(j >= 0 && array[j] > aux){
-    array[j + 1] = array[j]
+var j = i - 1;
+var aux = array[i];  // 1
+while(j >= 0 && array[j] > aux){
+array[j + 1] = array[j]
     j--
-  }
+}
   array[j + 1] = aux
 }
 
 return array
-
 }
 
 
@@ -103,18 +102,17 @@ function selectionSort(array) {
 
 for (let i = 0; i < array.length -1; i++) {
   var min = i;
-  for (let j = i + 1; j < array.length; j++) {
-    if(array[j] <  array[min]){
-      min = j;
-    } 
-  } 
-  var aux = array[i]
-  array[i] = array[min]
-  array[min] = aux ;
+for (let j = i + 1; j < array.length; j++) {
+if(array[j] <  array[min]){
+min = j;
+} 
+} 
+var aux = array[i]
+array[i] = array[min]
+array[min] = aux ;
 }
 
 return array; 
-
 }
 
 

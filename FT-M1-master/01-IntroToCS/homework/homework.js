@@ -8,8 +8,6 @@ function BinarioADecimal(num) {
 var res = 0;
 var pos = 0;
 
-
-
 for (let i = num.length - 1; i >= 0; i--)   {
      res = res + num[i] * 2 ** pos
      pos ++

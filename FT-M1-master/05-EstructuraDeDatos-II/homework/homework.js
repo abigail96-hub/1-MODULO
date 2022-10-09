@@ -17,35 +17,35 @@ this.head = null
 
 function Node(value) {
 
-  this.value = value;
-  this.next = null;
+this.value = value;
+this.next = null;
 }
 
 LinkedList.prototype.add = function(v){
- var newNode = new Node(v);
- var current = this.head;
+var newNode = new Node(v);
+var current = this.head;
 
- if(!current){
-   this.head = newNode;
-   return 
-  } 
- while(current.next) { 
- current = current.next;
- }
- current.next = newNode;
- }
+if(!current){
+this.head = newNode;
+return 
+} 
+while(current.next) { 
+current = current.next;
+}
+current.next = newNode;
+}
 
 
 LinkedList.prototype.remove = function () {
-   // Aqui me voy a guardar en una variable el valor de mi head
-  var current = this.head;
-  // pregunto si mi lista esta vacia retornar null
-  if(!current) return null;
-  //aqui pewguntamos si tiene un solo nodo
-  if(current.next === null){
-    this.head = null;
-    return current.value;     //  
-  }
+ // Aqui me voy a guardar en una variable el valor de mi head
+var current = this.head;
+// pregunto si mi lista esta vacia retornar null
+if(!current) return null;
+//aqui pewguntamos si tiene un solo nodo
+if(current.next === null){
+this.head = null;
+return current.value;     //  
+}
 // si tiene mas de un valor   
 // 2--->3-->4---null   5 preguntamos si tiene dos . next entonces entramos al while
 while(current.next.next){
@@ -111,15 +111,15 @@ this.buckets = [];
 }
   
 HashTable.prototype.hash = function (value) {
-  var res = 0;
+var res = 0;
    // vamos a recorrer los strings, y revisando sus valores de charCodeat ( que este metodo te devuelve mediante su Incice o Index(0) el numero de charCodeat de cada letra del String)
-  for (let index = 0; index < value.length; index++) {
-    res = res + value.charCodeAt(index);
+for (let index = 0; index < value.length; index++) {
+res = res + value.charCodeAt(index);
     // Por supuesto devolvemos el resultado, pero le pasamos el modulo para que no se pase de 35 que es su numero de casilleros.  %
-  }
-   return res % this.numBuckets;
-
 }
+return res % this.numBuckets;
+}
+
 
 
 HashTable.prototype.set = function (key, value) {
@@ -128,7 +128,7 @@ if(typeof key !== "string") throw new TypeError ('Keys must be strings')
 var index = this.hash(key)
 //para evitar los valores de pisen, cuando dos palabras tengan las mismas letras. // crea un objeto vacio para que ahi se almacenen todos los valores y no se pisen.
 if(!this.buckets[index]) {
-  this.buckets[index] = {}
+this.buckets[index] = {}
 }
 this.buckets[index][key] = value
 }
@@ -138,15 +138,15 @@ this.buckets[index][key] = value
  // el metodo get busca los valores key en la posicion indicadadel las hashtable
 HashTable.prototype.get = function(key) {
 // pasamos la funcion Hasheadora  y retornarmos el numero de buckets en la posicion de index
- var index = this.hash(key)
-  return this.buckets[index][key]
+var index = this.hash(key)
+return this.buckets[index][key]
 }
 
 
 HashTable.prototype.hasKey = function (key){
 // consigue la posicion con get
- var index = this.hash(key);
- return this.buckets[index].hasOwnProperty(key)
+var index = this.hash(key);
+return this.buckets[index].hasOwnProperty(key)
 }
 // se valida que se objeto buscado sea el correspondiente
 

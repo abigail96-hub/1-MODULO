@@ -20,9 +20,9 @@ function counter() {
   otroContador()      // 3
    */
 
-  var count = 1;
+var count = 1;
 return function() {
-  return count++
+return count++
 
 }
 
@@ -52,8 +52,8 @@ function cacheFunction(cb) {
 var cache = {};
 return function(a){
 if(cache.hasOwnProperty(a)) return cache[a]
-  cache[a] = cb(a)
-  return cache[a]
+cache[a] = cb(a)
+ return cache[a]
 
 }
 }

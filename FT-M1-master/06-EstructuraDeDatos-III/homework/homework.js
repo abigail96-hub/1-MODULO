@@ -23,28 +23,28 @@ BinarySearchTree.prototype.size = function () {
 if(this.right === null && this. left === null){
 return 1 
 } if( this. left === null){
-  return 1 + this.right.size()
+return 1 + this.right.size()
 }if(this.right === null){
-  return 1 + this.left.size()
+return 1 + this.left.size()
 }
 return 1 + this.right.size() + this.left.size()
 }
 
 
 BinarySearchTree.prototype.insert = function (value) {
-  if(value > this.value){
-  if(this.right === null){
-    this.right = new BinarySearchTree(value)
-    }else{
-      this.right.insert(value)
-    }
-  }if(value < this.value){
-    if(this.left === null){
-      this.left = new BinarySearchTree(value)
-    }else{
-     this.left.insert(value)
-    }
-  }
+if(value > this.value){
+if(this.right === null){
+ this.right = new BinarySearchTree(value)
+}else{
+ this.right.insert(value)
+}
+}if(value < this.value){
+if(this.left === null){
+ this.left = new BinarySearchTree(value)
+}else{
+ this.left.insert(value)
+}
+}
 }
 
 

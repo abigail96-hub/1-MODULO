@@ -60,9 +60,9 @@ function mergeSort(array) {
   // Devolver el array ordenado resultante
   // Tu código:
 
-  if(array.length === 1){
-    return array;
-  }
+if(array.length === 1){
+return array;
+}
 
 
 let mitad = Math.floor(array.length / 2) // divide el array en 2. El Math floor deja la division en numeros enteros. 
@@ -75,18 +75,18 @@ return merge(mergeSort(left), mergeSort(right))
 
 function merge(left, right) {
 
-  let arr = [] // crea el array donde se guarda el elemento
+let arr = [] // crea el array donde se guarda el elemento
   while(left.length && right.length) {   // se ejecuta  la funcion mientras se cumpla la condicion(ambos array tienen elementos.
-    if(left[0] < right[0]) { //  preguntamos si el primer elemento de la izquierda es menor que el primer elemento de la derecha.
-      arr.push(left.shift()); // si es true se pushea al arr creado el primer elemento (y sale de left)
-    } else {
-      arr.push(right.shift()); // se pushean a la derecha mientras no sean menorres.
-    }
-
-    }
-    let array = arr.concat(left, right)
-    return array;
+if(left[0] < right[0]) { //  preguntamos si el primer elemento de la izquierda es menor que el primer elemento de la derecha.
+arr.push(left.shift()); // si es true se pushea al arr creado el primer elemento (y sale de left)
+ } else {
+arr.push(right.shift()); // se pushean a la derecha mientras no sean menorres.
   }
+
+  }
+let array = arr.concat(left, right)
+return array;
+}
 
 
 
